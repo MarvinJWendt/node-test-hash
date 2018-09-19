@@ -52,7 +52,9 @@ test('Check empty string', t => {
 })
 
 test('Check null hash', t => {
-  t.is(testHash(null, 'Hello World'), false)
+  t.throws(() => {
+    testHash('da39a3ee5e6b4b0d3255bfef95601890afd80709', null), TypeError('Hash cannot be null')
+  })
 })
 
 test('Throw error on null string', t => {

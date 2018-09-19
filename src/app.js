@@ -8,6 +8,12 @@ module.exports = function (hash, string) {
     return false
   }
 
+  if(hash === null) {
+    throw TypeError('Hash cannot be null')
+    return false
+  }
+
+
   for (let algo in crypto.getHashes()) {
     try {
       if (crypto.createHash(crypto.getHashes()[algo]).update(string).digest('hex').toString() == hash.toString()) return true
