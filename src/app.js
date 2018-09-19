@@ -12,3 +12,11 @@ module.exports.md5 = function (hash, string) {
 
   return false
 }
+
+module.exports.sha1 = function (hash, string) {
+  let hashed = crypto.createHash('sha1').update(string).digest('hex')
+  console.log(hashed.toString())
+  if (hash.toString() === hashed.toString()) return true
+
+  return false
+}
