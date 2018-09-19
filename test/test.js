@@ -1,10 +1,11 @@
 import test from 'ava'
+const crypto = require('crypto')
 
 const app = require('../src/app')
 
 test('Crypto supported', t => {
   try {
-    let crypto = require('crypto')
+    const crypto = require('crypto')
   }
   catch (err) {
     t.fail('Crypto is disabled!')
@@ -19,4 +20,8 @@ test('Check MD5', t => {
 
 test('Check SHA1', t => {
   t.is(app.sha1('0a4d55a8d778e5022fab701977c5d840bbc486d0', 'Hello World'), true)
+})
+
+test('All', t => {
+  t.is(app('0a4d55a8d778e5022fab701977c5d840bbc486d0', 'Hello World'), true)
 })

@@ -3,14 +3,16 @@ const crypto = require('crypto')
 
 module.exports = function (hash, string) {
 
-}
 
-module.exports.md5 = function (hash, string) {
-  let hashed = crypto.createHash('md5').update(string).digest('hex')
-  return (hash.toString() === hashed.toString())
-}
+  for (let algo in crypto.getHashes()) {
+    try {
+      if (crypto.createHash(crypto.getHashes()[algo]).update(string).digest('hex').toString() == hash.toString()) return true
+    }
+    catch (err) {
+      console.log(err)
+    }
+  }
 
-module.exports.sha1 = function (hash, string) {
-  let hashed = crypto.createHash('sha1').update(string).digest('hex')
-  return (hash.toString() === hashed.toString())
+  return false
+
 }
