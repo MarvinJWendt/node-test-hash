@@ -37,3 +37,7 @@ test('Check RIPEMD-160', t => {
 test('Check Whirlpool', t => {
   t.is(testHash('b77b284bffc952efee36a94397a0ce11e8624668e33b7020a80eb2fb21096f0a08518c50d023de12b010c2e30b93b5837dc471d899608d786fe9a6b60112ea4a', 'Hello World'), true)
 })
+
+test('Check "not a hash"', t => {
+  t.is(testHash("NOT_A_HASH_", "Hello World"), false)
+})
