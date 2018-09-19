@@ -48,11 +48,15 @@ test('Check empty hash', t => {
 })
 
 test('Check empty string', t => {
-  t.is(testHash('da39a3ee5e6b4b0d3255bfef95601890afd80709', ''), false)
+  t.is(testHash('da39a3ee5e6b4b0d3255bfef95601890afd80709', ''), true)
 })
 
-test('Check null', t => {
+test('Check null hash', t => {
   t.is(testHash(null, 'Hello World'), false)
+})
+
+test('Check null string', t => {
+  t.is(testHash('da39a3ee5e6b4b0d3255bfef95601890afd80709', null), false)
 })
 
 test('Check non-latin characters', t => {
