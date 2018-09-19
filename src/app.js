@@ -3,6 +3,7 @@ const crypto = require('crypto')
 
 module.exports = function (hash, string) {
 
+  if(string === null) throw 'String cannot be null'
 
   for (let algo in crypto.getHashes()) {
     try {
