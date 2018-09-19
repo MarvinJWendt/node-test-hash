@@ -1,14 +1,12 @@
 import test from 'ava'
 
-const crypto = require('crypto')
-
 const testHash = require('../src/app')
 
 test('Crypto supported', t => {
   try {
     const crypto = require('crypto')
-  }
-  catch (err) {
+    crypto.toString()
+  } catch (err) {
     t.fail('Crypto is disabled!')
   }
 
@@ -51,16 +49,14 @@ test('Check empty string', t => {
   t.is(testHash('da39a3ee5e6b4b0d3255bfef95601890afd80709', ''), true)
 })
 
-test('Check null hash', t => {
-  t.throws(() => {
-    testHash('da39a3ee5e6b4b0d3255bfef95601890afd80709', null), TypeError('Hash cannot be null')
-  })
+test('Throw error on null hash', t => {
+  const error = t.throws(() => testHash(null, 'Hello World'), TypeError)
+  t.is(error.message, 'Hash cannot be null')
 })
 
 test('Throw error on null string', t => {
-  t.throws(() => {
-    testHash('da39a3ee5e6b4b0d3255bfef95601890afd80709', null), TypeError('String cannot be null')
-  })
+  const error = t.throws(() => testHash('da39a3ee5e6b4b0d3255bfef95601890afd80709', null), TypeError)
+  t.is(error.message, 'String cannot be null')
 })
 
 test('Check non-latin characters', t => {
