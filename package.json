@@ -1,6 +1,6 @@
 {
   "name": "test-hash",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "src/app.js",
   "dependencies": {},
@@ -17,5 +17,11 @@
     "type": "git",
     "url": "https://github.com/MarvinJWendt/node-test-hash.git"
   },
-  "keywords": ["Hash", "Test", "Hashing", "Decrypt", "Decipher"]
+  "keywords": [
+    "Hash",
+    "Test",
+    "Hashing",
+    "Decrypt",
+    "Decipher"
+  ]
 }
