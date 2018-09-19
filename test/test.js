@@ -1,4 +1,5 @@
 import test from 'ava'
+
 const crypto = require('crypto')
 
 const testHash = require('../src/app')
@@ -39,5 +40,5 @@ test('Check Whirlpool', t => {
 })
 
 test('Check "not a hash"', t => {
-  t.is(testHash("NOT_A_HASH_", "Hello World"), false)
+  t.is(testHash('NOT_A_HASH_', 'Hello World'), false)
 })

@@ -1,5 +1,5 @@
 # TEST-HASH
-NodeJS module to test if a hash results in a given string without knowing the hashing algorithm.
+>NodeJS module to test if a hash results in a given string without knowing the hashing algorithm.
 
 ## Supported hashes
 All hashes from the NodeJS librarie `crypto` are supported.
