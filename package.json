@@ -18,10 +18,13 @@
     "url": "https://github.com/MarvinJWendt/node-test-hash.git"
   },
   "keywords": [
-    "Hash",
-    "Test",
-    "Hashing",
-    "Decrypt",
-    "Decipher"
+    "hash",
+    "test",
+    "hashing",
+    "decrypt",
+    "decipher",
+    "md5",
+    "sha",
+    "debug"
   ]
 }
