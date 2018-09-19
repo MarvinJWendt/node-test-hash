@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.com/MarvinJWendt/node-test-hash.svg?branch=master)](https://travis-ci.com/MarvinJWendt/node-test-hash)
   
 ## Supported hashes  
-All hashes from the NodeJS librarie `crypto` are supported.  
+All hashes from the NodeJS library `crypto` are supported.  
   
 ## Usage  
   
