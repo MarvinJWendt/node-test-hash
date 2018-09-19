@@ -40,5 +40,25 @@ test('Check Whirlpool', t => {
 })
 
 test('Check "not a hash"', t => {
-  t.is(testHash('NOT_A_HASH_', 'Hello World'), false)
+  t.is(testHash('NOT_A_HASH', 'Hello World'), false)
+})
+
+test('Check empty hash', t => {
+  t.is(testHash('', 'Hello World'), false)
+})
+
+test('Check empty string', t => {
+  t.is(testHash('da39a3ee5e6b4b0d3255bfef95601890afd80709', ''), false)
+})
+
+test('Check null', t => {
+  t.is(testHash(null, 'Hello World'), false)
+})
+
+test('Check non-latin characters', t => {
+  t.is(testHash('äüöß', 'Hello World'), false)
+})
+
+test('Check non-latin characters', t => {
+  t.is(testHash('äüöß', 'Hello World'), false)
 })
