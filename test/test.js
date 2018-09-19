@@ -55,12 +55,10 @@ test('Check null hash', t => {
   t.is(testHash(null, 'Hello World'), false)
 })
 
-test('Check null string', t => {
-  t.is(testHash('da39a3ee5e6b4b0d3255bfef95601890afd80709', null), false)
-})
-
-test('Check non-latin characters', t => {
-  t.is(testHash('äüöß', 'Hello World'), false)
+test('Throw error on null string', t => {
+  t.throws(() => {
+    testHash('da39a3ee5e6b4b0d3255bfef95601890afd80709', null), TypeError('String cannot be null')
+  })
 })
 
 test('Check non-latin characters', t => {
