@@ -11,7 +11,7 @@ All hashes from the NodeJS library `crypto` are supported.
   
 Install the package with `npm i test-hash`  
   
-Import the module like this:  
+Import the module like this:
   
     const testHash = require('test-hash')  
 

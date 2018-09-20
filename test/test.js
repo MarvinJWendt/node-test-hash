@@ -68,14 +68,6 @@ test('Throw error on null algorithm', t => {
   t.is(error.message, 'Algorithm cannot be null')
 })
 
- /**test('Check non-latin characters', t => {
+test('Check non-latin characters', t => {
   t.false(testHash('äüöß', 'Hello World'))
 })
-
- test('Check hash with custom algorithm', t => {
-  t.is(testHash('b10a8db164e0754105b7a99be72e3fe5', 'Hello World', 'md5'))
-})
-
- test('Check hash with custom (wrong) algorithm', t => {
-  t.false(testHash('b10a8db164e0754105b7a99be72e3fe5', 'Hello World', 'sha1'))
-})**/
