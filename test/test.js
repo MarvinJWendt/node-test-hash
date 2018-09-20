@@ -59,6 +59,23 @@ test('Throw error on null string', t => {
   t.is(error.message, 'String cannot be null')
 })
 
-test('Check non-latin characters', t => {
+test('Check known hash', t => {
+  t.true(testHash('b10a8db164e0754105b7a99be72e3fe5', 'Hello World', 'md5'))
+})
+
+test('Throw error on null algorithm', t => {
+  const error = t.throws(() => testHash('da39a3ee5e6b4b0d3255bfef95601890afd80709', 'Hello World', null), TypeError)
+  t.is(error.message, 'Algorithm cannot be null')
+})
+
+ /**test('Check non-latin characters', t => {
   t.false(testHash('äüöß', 'Hello World'))
 })
+
+ test('Check hash with custom algorithm', t => {
+  t.is(testHash('b10a8db164e0754105b7a99be72e3fe5', 'Hello World', 'md5'))
+})
+
+ test('Check hash with custom (wrong) algorithm', t => {
+  t.false(testHash('b10a8db164e0754105b7a99be72e3fe5', 'Hello World', 'sha1'))
+})**/
