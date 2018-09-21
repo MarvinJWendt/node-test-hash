@@ -2,8 +2,6 @@ const crypt = require('crypto')
 
 module.exports = (hash: string, string: string, algorithm = 'guess') => {
 
-  console.log(algorithm)
-
   if (string === null) throw TypeError('String cannot be null')
   if (hash === null) throw TypeError('Hash cannot be null')
 
