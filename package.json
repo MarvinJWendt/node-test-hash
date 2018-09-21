@@ -2,7 +2,7 @@
   "name": "test-hash",
   "version": "2.0.1",
   "description": "",
-  "main": "src/app.ts",
+  "main": "src/app.js",
   "dependencies": {
     "@types/node": "^10.10.1"
   },

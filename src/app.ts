@@ -1,6 +1,6 @@
 const crypt = require('crypto')
 
-module.exports = function (hash: string, string: string, algorithm = 'guess') {
+module.exports = (hash: string, string: string, algorithm = 'guess') => {
 
   console.log(algorithm)
 

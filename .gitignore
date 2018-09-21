@@ -74,3 +74,6 @@ typings/
 
 # IntelliJ
 .idea/
+
+# Backups
+*.bak

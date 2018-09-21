@@ -1,6 +1,6 @@
 "use strict";
 const crypt = require('crypto');
-module.exports = function (hash, string, algorithm = 'guess') {
+module.exports = (hash, string, algorithm = 'guess') => {
     console.log(algorithm);
     if (string === null)
         throw TypeError('String cannot be null');
