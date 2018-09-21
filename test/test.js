@@ -1,6 +1,6 @@
 import test from 'ava'
 
-const testHash = require('../src/app')
+const testHash = require('../src/app.js')
 
 test('Crypto supported', t => {
   try {
@@ -12,6 +12,8 @@ test('Crypto supported', t => {
 
   t.pass()
 })
+
+testHash()
 
 test('Check MD5', t => {
   t.true(testHash('b10a8db164e0754105b7a99be72e3fe5', 'Hello World'))
