@@ -20,4 +20,3 @@ module.exports = (hash: string, string: string, algorithm = 'guess') => {
 
   return false
 }
-
