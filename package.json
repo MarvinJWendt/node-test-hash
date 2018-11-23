@@ -3,11 +3,10 @@
   "version": "2.1.1",
   "description": "",
   "main": "src/app.js",
-  "dependencies": {
-    "@types/node": "^10.10.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "ava": "1.0.0-beta.8"
+    "ava": "1.0.0-beta.8",
+    "@types/node": "^10.10.1"
   },
   "scripts": {
     "build": "tsc && npm test",
