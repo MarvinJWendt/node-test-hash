@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "dependencies": {},
   "devDependencies": {
-    "ava": "1.0.0-beta.8",
+    "ava": "1.0.0-rc.2",
     "@types/node": "^10.10.1"
   },
   "scripts": {
