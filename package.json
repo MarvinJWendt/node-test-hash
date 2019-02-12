@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "ava": "1.2.0",
-    "@types/node": "^10.10.1"
+    "@types/node": "^11.9.0"
   },
   "scripts": {
     "build": "tsc && npm test",
